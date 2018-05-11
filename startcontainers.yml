@@ -5,7 +5,7 @@
       docker_container:
          image: tektutor/ansible-ubuntu
          name: "ubuntu{{item}}"
-         state: present
+         state: started 
          ports:
            - "200{{item}}:22"
            - "800{{item}}:80"
@@ -15,7 +15,7 @@
       docker_container:
          image: tektutor/ansible-centos
          name: "centos{{item}}"
-         state: present
+         state: started 
          ports:
            - "300{{item}}:22"
            - "900{{item}}:80"
