@@ -1,5 +1,9 @@
 - name: Manage nginx
   hosts: all
+  vars:
+    - greet_msg: DevOps
+    - provisioner_tool: Docker
+    - automation_tool: Ansible
   tasks:
     - name: Install nginx on Ubuntu
       apt: name=nginx state=present update_cache=yes
